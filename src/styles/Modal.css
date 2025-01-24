@@ -1,0 +1,70 @@
+/* Modal.css */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spectacledcoder-hover-fill-button2 {
+    margin: auto;
+    display: flex;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;
+    border: 1px solid rgb(160, 168, 255);
+    background-color: white;
+    font-family: 'Belanosima', sans-serif;
+    cursor: pointer;
+    align-items: center;
+    justify-content: left;
+}
+
+.color-fill-2 {
+    position: absolute;
+    width: 20px;
+    height: 50px;
+    border-radius: 25px 0px 0px 25px;
+    background-color: rgb(160, 168, 255);
+    visibility: hidden;
+}
+
+.spectacledcoder-hover-fill-button2:hover .color-fill-2 {
+    visibility: visible;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    transition: all 0.3s;
+    background-color: rgb(160, 168, 255);
+    ;
+}
+
+.spectacledcoder-hover-fill-button2:hover {
+    box-shadow: 1px 1px 20px rgb(160, 168, 255);
+    transition: all 1s;
+}
+
+.spectacledcoder-hover-fill-button2 p {
+    margin: auto;
+    z-index: 10;
+}

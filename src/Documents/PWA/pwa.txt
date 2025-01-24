@@ -1,0 +1,12 @@
+                    PWA SETUP INSTRUCTIONS
+                    **********************
+
+step 1: npm install vite-plugin-pwa --save-dev
+
+step 2: Add Needed Resources (assets && Logo && ScreenShot) && Add Config Details In vite.config.js
+
+step 3: Add Tags In index.html For Manifest
+
+step 4: Add manifest.webmanifest File && service-worker.js File In /Pulic
+
+step 5: Add ServiceWorker Function For Install & Update Service Worker In /main.jsx.

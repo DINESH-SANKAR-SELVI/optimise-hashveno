@@ -1,0 +1,61 @@
+footer a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+footer a,
+footer a:hover {
+    text-decoration: none !important;
+}
+
+.footer {
+    padding: 7rem 0 0 0;
+}
+
+.footer .nav-links li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer .nav-links li a {
+    font-size: 14px;
+    color: #777;
+    cursor: pointer;
+}
+
+.footer .nav-links li a:hover {
+    color:#10e0be;
+}
+
+.footer .social .app {
+    font-size: 13px;
+}
+
+.footer .social li {
+    display: inline-block;
+}
+
+.footer .social li a {
+    display: inline-block;
+    padding: 10px;
+    color: #ccc;
+}
+
+.footer .social li a:hover {
+    color: #08db36;
+}
+
+.footer .social.nav-left li:first-child a {
+    padding-left: 0px;
+}
+
+.footer .social.nav-right li:last-child a {
+    padding-right: 0px;
+}
+
+.footer h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
+
+:root {
+    --color-text-secondary: #fff;
+    --color-background-primary: #18181b;
+    --color-background-secondary: #222326;
+    --color-accent: #55d679;
+}
+
+:root :has(.theme-toggle input:checked) {
+    --color-text-secondary: #000;
+    --color-background-primary: #f2f7f9;
+    --color-background-secondary: #fff;
+    --color-accent: #9333ea;
+}
+
+.theme-toggle-container {
+    display: inline-block;
+    font-family: "Inter", sans-serif;
+    font-size: small;
+     color: var(--color-text-primary);
+    /* background-color: var(--color-background-primary);  */
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    /* gap: 0.5rem; */
+    border-radius: 99em;
+    background-color: var(--color-background-secondary);
+    color: var(--color-text-secondary);
+    padding: 0.375em 1em;
+    cursor: pointer;
+    user-select: none;
+    width: 130px;
+}
+
+.theme-toggle:hover {
+    color: var(--color-text-secondary);
+}
+
+.theme-toggle input {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}

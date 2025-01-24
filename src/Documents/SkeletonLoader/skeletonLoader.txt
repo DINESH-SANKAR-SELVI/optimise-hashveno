@@ -1,0 +1,12 @@
+                    Lazy Loading with skeleton Loader
+                    *********************************
+
+step 1: npm install react-loading-skeleton
+
+step 2: create Component To Wrap The Component.
+
+step 3: Create Custom Component for show while loading with import inbuild css
+
+step 4: import component With React's Lazy Loading Method
+
+step 5: import Wraper and give component which want lazy load within wrapper.

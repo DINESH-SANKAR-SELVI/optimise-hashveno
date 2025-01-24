@@ -1,0 +1,8 @@
+                ua-parser-js
+                ************
+
+step 1: npm install ua-parser-js
+
+step 2: Create Class For Collect Details In /utils
+
+step 3: Import class In App.jsx , Call With UseEffect()

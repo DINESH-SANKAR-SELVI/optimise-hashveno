@@ -1,0 +1,98 @@
+.clients-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(40vh);
+    /* width: calc(100vw); */
+    overflow: hidden;
+    font-size: large;
+}
+
+.clients-scroll-parent {
+    position: relative;
+    width: 100vw;
+    height: 20rem;
+    padding: 2rem 0;
+    overflow: hidden;
+    cursor: pointer; /* Change cursor to indicate hoverable area */
+}
+
+.clients-scroll-element {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the start */
+    width: calc(100% * 2); /* Allow for two sets of logos */
+    height: 100%;
+}
+
+.clients-scroll-element div {
+    text-align: center; /* Center text under images */
+}
+
+.clients-scroll-element img {
+    width: 80px; /* Default width for mobile */
+    height: 80px; /* Default height for mobile */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
+.clients-primary {
+    animation: primary 20s linear infinite;
+}
+
+.clients-secondary {
+    animation: secondary 20s linear infinite;
+    left: 100%; /* Start the secondary animation off-screen to the right */
+}
+
+@keyframes primary {
+    from {
+        right: 0;
+    }
+    to {
+        left: -100%; /* Move to the left by 50% of its width */
+    }
+}
+
+@keyframes secondary {
+    from {
+        left: 100%; /* Start from the right */
+    }
+    to {
+        right: 0%; /* Move to the left to align with primary */
+    }
+}
+
+.clients-scroll-parent:hover .clients-primary,
+.clients-scroll-parent:hover .clients-secondary {
+    animation-play-state: paused;
+}
+
+.clients-image-name-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4%;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 600px) {
+    .clients-scroll-element img {
+        width: 100px; /* Increased width for tablets */
+        height: 100px; /* Increased height for tablets */
+    }
+}
+
+@media (min-width: 900px) {
+    .clients-scroll-element img {
+        width: 120px; /* Increased width for desktops */
+        height: 120px; /* Increased height for desktops */
+    }
+
+    .clients-scroll-parent {
+        height: 25rem; /* Increased height for desktops */
+    }
+}

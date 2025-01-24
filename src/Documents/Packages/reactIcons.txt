@@ -1,0 +1,6 @@
+        React Icons
+        ***********
+
+step 1: npm install react-icons
+
+step 2: import Component and Use In customComponent

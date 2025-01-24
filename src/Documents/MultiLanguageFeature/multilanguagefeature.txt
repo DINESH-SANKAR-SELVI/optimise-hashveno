@@ -1,0 +1,11 @@
+            MultiLanguage Feature
+            *********************
+step 1: npm install react-i18next i18next
+
+step 2: Create Floder For Store Json File For Different Languages and For Configuration
+
+setp 3: Import Configuration In Main.jsx
+
+step 4: import useTranslation(); and create object for that const { t } = useTranslation(); 
+
+step 5: apply in component {t('key')}
