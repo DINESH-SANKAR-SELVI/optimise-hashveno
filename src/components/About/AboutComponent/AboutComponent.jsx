@@ -1,5 +1,5 @@
 import React from 'react';
-import FAQ from '../../FAQ';
+import FAQComponent from '../../FAQ/FAQComponent/FAQComponent';
 import AboutCardComponent from '../AboutCard/AboutCardComponent';
 
 const cardData = [
@@ -64,7 +64,7 @@ const AboutComponent = ({id, t }) => {
                 ))}
             </div>
             <div>
-                <FAQ />
+                <FAQComponent />
             </div>
 
             {/* <div className="mapouter">

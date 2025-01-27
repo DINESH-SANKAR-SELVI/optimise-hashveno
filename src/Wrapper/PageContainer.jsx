@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/Fonts.css';
 import { useTranslation } from 'react-i18next';
 import LazyLoad from './LazyLoad';
 

@@ -1,10 +1,9 @@
-// src/components/ThemeSwitcher.js
 import React from 'react';
-import { useTheme } from '../contexts/ThemeContext';
+import { useTheme } from '../../../contexts/ThemeContext';
 import { FaLightbulb } from 'react-icons/fa';
-import '../styles/ThemeSwitcher.css'
+import './ThemeSwitcherComponent.css'
 
-const ThemeSwitcher = () => {
+const ThemeSwitcherComponent = () => {
     const { theme, toggleTheme } = useTheme();
 
     return (
@@ -18,4 +17,4 @@ const ThemeSwitcher = () => {
     );
 };
 
-export default ThemeSwitcher;
+export default ThemeSwitcherComponent;

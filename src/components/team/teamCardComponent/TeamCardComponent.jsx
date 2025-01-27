@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import './TeamCardComponent.css';
-import '../../../styles/Fonts.css';
 
 const TeamCardComponent = ({ member, openExploreLink }) => {
     return (

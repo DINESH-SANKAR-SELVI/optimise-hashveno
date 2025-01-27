@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, Suspense } from 'react';
-import SkeletonLoader from '../components/SkeletonLoader'; // Adjust the import based on your file structure
+import SkeletonLoader from '../components/loaders/SkeletonLoader';
 
 const LazyLoad = ({ children, id }) => {
   const [isVisible, setIsVisible] = useState(false);

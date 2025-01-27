@@ -11,7 +11,7 @@
 .clients-scroll-parent {
     position: relative;
     width: 100vw;
-    height: 20rem;
+    height: 10rem;
     padding: 2rem 0;
     overflow: hidden;
     cursor: pointer; /* Change cursor to indicate hoverable area */
@@ -93,6 +93,6 @@
     }
 
     .clients-scroll-parent {
-        height: 25rem; /* Increased height for desktops */
+        height: 13rem; /* Increased height for desktops */
     }
 }

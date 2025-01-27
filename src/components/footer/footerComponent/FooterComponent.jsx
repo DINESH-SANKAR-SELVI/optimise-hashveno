@@ -1,7 +1,6 @@
 // src/App.js
 import React from 'react';
 import './FooterComponent.css';
-import '../../../styles/Fonts.css';
 import { useTranslation } from 'react-i18next';
 import FooterLink from '../footerLink/FooterLink';
 import SocialLinks from '../socialLinks/SocialLinks';

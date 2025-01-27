@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import '../styles/FAQ.css';
-import '../styles/Fonts.css';
+import './FAQComponent.css';
 import { useTranslation } from 'react-i18next';
 // import { Helmet } from 'react-helmet';
 
-const FAQ = () => {
+const FAQComponent = () => {
     // State to track which accordion item is expanded
     const [expandedIndex, setExpandedIndex] = useState(null);
 
@@ -114,4 +113,4 @@ const FAQ = () => {
     );
 };
 
-export default FAQ;
+export default FAQComponent;

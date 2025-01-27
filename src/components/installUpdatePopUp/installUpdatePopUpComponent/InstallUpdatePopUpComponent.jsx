@@ -1,9 +1,9 @@
 // Modal.js
 import React from 'react';
-import '../styles/Modal.css'; // Optional: Add your styles here
+import './InstallUpdatePopUpComponent.css';
 import { Helmet } from 'react-helmet';
 
-const Modal = ({ 
+const InstallUpdatePopUpComponent = ({ 
     isOpen, 
     onClose, 
     onProceed, 
@@ -69,4 +69,4 @@ const Modal = ({
     );
 };
 
-export default Modal;
+export default InstallUpdatePopUpComponent;

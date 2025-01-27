@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { FaInfoCircle, FaBox, FaServicestack, FaEnvelope, FaNewspaper } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
-import '../styles/HeaderComponent.css';
-import '../styles/Fonts.css';
-import ThemeSwitcher from '../components/ThemeSwitcher';
+import './HeaderComponent.css';
+import ThemeSwitcherComponent from '../../themeSwitcher/themeSwitcherComponent/ThemeSwitcherComponent';
 
-const Header = () => {
+const HeaderComponent = () => {
 
   const [prevScrollpos, setPrevScrollpos] = useState(window.pageYOffset);
   const [top, setTop] = useState(0);
@@ -89,7 +88,7 @@ const Header = () => {
                 <a onClick={() => changeLanguage('kan')}>ಕನ್ನಡ</a>
               </div>
             </div></li>
-            <li><a className="nav-item" ><ThemeSwitcher /></a></li>
+            <li><a className="nav-item" ><ThemeSwitcherComponent /></a></li>
             <li><a href="#about" className="nav-item">
               <FaInfoCircle className="icon" />
               <span>{t('about.title')}</span>
@@ -154,7 +153,7 @@ const Header = () => {
               <span>{t('contact.title')}</span>
             </a></li>
             <li><a><div onClick={closeMobileMenu} className="nav-item">
-              <ThemeSwitcher />
+              <ThemeSwitcherComponent />
             </div></a></li>
           </ul>
         </div>
@@ -168,4 +167,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderComponent;
