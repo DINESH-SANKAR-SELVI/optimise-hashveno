@@ -5,7 +5,7 @@
   "about": {
     "title": "About Us",
     "welcome": "Welcome to <strong>HashVeno</strong>",
-    "description": "At <strong>HashVeno</strong>, we are dedicated to transforming the way businesses operate through innovative software solutions. Founded in <strong>2024</strong>, we specialize in developing cutting-edge Software as a Service (SaaS) products that empower organizations to enhance efficiency, drive growth, and achieve their goals.",
+    "description": "Welcome to <strong>HashVeno</strong> <br />At <strong>HashVeno</strong>, we are dedicated to transforming the way businesses operate through innovative software solutions. Founded in <strong>2024</strong>, we specialize in developing cutting-edge Software as a Service (SaaS) products that empower organizations to enhance efficiency, drive growth, and achieve their goals.",
     "mission": "Our Mission",
     "missionDescription": "Our mission is to provide businesses of all sizes with accessible, scalable, and user-friendly software solutions that simplify complex processes and foster collaboration. We believe that technology should be an enabler, not a barrier, and we strive to create products that are intuitive and impactful.",
     "whatWeDo": "What We Do",
@@ -86,7 +86,7 @@
   },
   "support": {
     "title": "Support Our Company",
-    "introPart1": "At",
+    "introPart1": "At<strong> HashVeno</strong>, we are dedicated to delivering exceptional products and services that make a positive impact in our community and beyond. Your support is crucial in helping us achieve our mission and continue to grow. Here’s how you can help:",
     "companyName": "HashVeno",
     "introPart2": ", we are dedicated to delivering exceptional products and services that make a positive impact in our community and beyond. Your support is crucial in helping us achieve our mission and continue to grow. Here’s how you can help:",
     "whySupport": {

@@ -1,34 +1,46 @@
-// App.js
-import './App.css';
-import './styles/HeaderComponent.css';
-import React, { useEffect, lazy, Suspense, useState } from 'react';
-import Header from './components/Header';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/WelcomePage.css';
-import './styles/Fonts.css';
-import LazyLoad from './Wrapper/LazyLoad';
-
-import { collectUserData } from './utils/collectUserData';
-import { useTheme } from './contexts/ThemeContext';
+/****************** In-Build Functions************************/
+import React, { useEffect, lazy, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import Modal from './components/Modal';
-import clickSound from '../public/assets/sound-effects/mouse-clicks.mp3';
+/*************************************************************/
 
-// Lazy load components
-const About = lazy(() => import('./components/About'));
-const Service = lazy(() => import('./components/Service'));
-const ContactDesign = lazy(() => import('./components/ContactDesign'));
-const Footer = lazy(() => import('./components/Footer'));
-const ProductCardDesign = lazy(() => import('./components/ProductCardDesign'));
-const WelcomePage = lazy(() => import('./pages/WelcomePage'));
-
-const Clients = lazy(() => import('./components/Clients'));
-const Blog = lazy(() => import('./components/Blog'));
-const Team = lazy(() => import('./components/Team'));
-const Support = lazy(() => import('./components/Support'));
-
+/****************** Custom Functions *************************/
+import { collectUserData } from './utils/collectUserData';
 import playSound from './utils/SoundPlayer';
+/*************************************************************/
 
+/****************** Contexts *********************************/
+import { useTheme } from './contexts/ThemeContext';
+/*************************************************************/
+
+/****************** Media Files ******************************/
+import clickSound from '../public/assets/sound-effects/mouse-clicks.mp3';
+/*************************************************************/
+
+/****************** Styles ***********************************/
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import './styles/Fonts.css';
+/*************************************************************/
+
+/****************** Components *******************************/
+import Modal from './components/Modal';
+
+/*************************************************************/
+
+/****************** Pages ************************************/
+import Header from './components/Header';
+const HomePage = lazy(() => import('./pages/HomePage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const ProductsPage = lazy(() => import('./pages/ProductsPage'));
+const ClientsPage = lazy(() => import('./pages/ClientsPage'));
+const BlogPage = lazy(() => import('./pages/BlogPage'));
+const TeamPage = lazy(() => import('./pages/TeamPage'));
+const SupportPage = lazy(() => import('./pages/SupportPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const FooterPage = lazy(() => import('./pages/FooterPage')); 
+const ConstructionPage = lazy(() => import('./pages/ConstructionPage'));
+/*************************************************************/
 
 const App = () => {
 
@@ -165,22 +177,6 @@ const App = () => {
 
     const { theme } = useTheme();
 
-    // if ('serviceWorker' in navigator) {
-    //     window.addEventListener('load', () => {
-    //         navigator.serviceWorker.register('/hashveno/service-worker.js')
-    //             .then((registration) => {
-    //                 setRegistration(registration);
-    //                 console.log('Service Worker registered with scope:', registration.scope);
-
-
-    //             })
-    //             .catch((error) => {
-    //                 console.error('Service Worker registration failed:', error);
-    //             });
-    //     });
-    // }
-
-
 const [deferredPrompt, setDeferredPrompt] = useState(null);
 const [isModalOpen, setIsModalOpen] = useState(false);
 const [isSafariOpen, setIsSafariOpen] = useState(false);
@@ -210,26 +206,6 @@ useEffect(() => {
     };
 }, []);
 
-//for update
-// useEffect(() => {
-//     // Check for service worker updates
-//     if ('serviceWorker' in navigator) {
-//         navigator.serviceWorker.register('/hashveno/service-worker.js').then((reg) => {
-//             setRegistration(reg);
-
-//             reg.onupdatefound = () => {
-//                 const newWorker = reg.installing;
-//                 newWorker.onstatechange = () => {
-//                     if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-//                         // New update available
-//                         setUpdateAvailable(true);
-//                     }
-//                 };
-//             };
-//         });
-//     }
-// }, [])
-
 const handleInstallClick = async () => {
     if (!deferredPrompt) return;
 
@@ -246,14 +222,6 @@ const handleInstallClick = async () => {
     // Reset the deferred prompt and hide the button
     setDeferredPrompt(null);
     setIsModalOpen(false);
-};
-
-const handleUpdateClick = async () => {
-    if (registration && registration.waiting) {
-        registration.waiting.postMessage({ type: 'SKIP_WAITING' });
-        window.location.reload();
-        setUpdateAvailable(false);
-    }
 };
 
 const handleCloseModal = async () => {
@@ -343,46 +311,17 @@ return (
 
         <Header />
         <main>
-            <LazyLoad id='home'>
-                <WelcomePage />
-            </LazyLoad>
-
-            <LazyLoad id='about'>
-                <About />
-            </LazyLoad>
-
-            <LazyLoad id='services'>
-                <Service />
-            </LazyLoad>
-
-            <LazyLoad id='products'>
-                <ProductCardDesign />
-            </LazyLoad>
-
-            <LazyLoad id='clients'>
-                <Clients />
-            </LazyLoad>
-
-            <LazyLoad id='blog'>
-                <Blog />
-            </LazyLoad>
-
-            <LazyLoad id='team'>
-                <Team />
-            </LazyLoad>
-
-            <LazyLoad id='support'>
-                <Support />
-            </LazyLoad>
-
-
-            <LazyLoad id='contact'>
-                <ContactDesign />
-            </LazyLoad>
-
-            <LazyLoad id='footer'>
-                <Footer />
-            </LazyLoad>
+            {/* <ConstructionPage id='construction' /> */}
+            <HomePage id='home' />
+            <AboutPage id='about' />
+            <ServicesPage id='services' />
+            <ProductsPage id='products' />
+            <ClientsPage id='clients' />
+            <BlogPage id='blog' />
+            <TeamPage id='team' />
+            <SupportPage id='support' />
+            <ContactPage id='contact' />
+            <FooterPage id='footer' />
         </main>
     </div>
 );
