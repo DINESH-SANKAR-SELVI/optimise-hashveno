@@ -1,5 +1,5 @@
 // In-Build Packages
-import { StrictMode } from 'react'
+// import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
 //Context & Config
@@ -64,9 +64,7 @@ function showUpdateNotification() {
 /********************************************************************************/
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
     <ThemeProvider>
       <App />
     </ThemeProvider>
-  </StrictMode>,
 )
