@@ -111,10 +111,10 @@ const HeaderComponent = () => {
             </a></li>
           </ul>
         </div>
-        {/* <div className="nav-button">
+        <div className="nav-button">
           <div className="anim-layer"></div>
-          <a href="#">Sign Up</a>
-        </div> */}
+          <a href="#" className='btn btn-outline-light'>Join us</a>
+        </div>
         <div id="hamburger-menu" onClick={toggleMobileMenu}>&#9776;</div>
       </div>
 

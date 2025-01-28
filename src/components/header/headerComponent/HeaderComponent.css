@@ -66,7 +66,7 @@
 
 .nav-button {
   /* background-color: #c52726; */
-  border-radius: 50px;
+  border-radius: 7%;
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -83,7 +83,7 @@
   left: 50%;
   width: 0;
   height: 100%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.322);
   transition: width 0.3s ease, left 0.3s ease;
 }
 
