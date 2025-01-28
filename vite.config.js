@@ -6,9 +6,10 @@ export default defineConfig({
   plugins: [react(),
     VitePWA({
       registerType: 'autoUpdate',
-      workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,webmanifest}'],
-      },
+      // workbox: {
+      //   globPatterns: ['**/*.{js,css,html,ico,png,svg,webmanifest}'],
+      // },
+      includeAssets: ['**/*'],
       manifest: {
         name: 'HashVeno',
         short_name: 'HashVeno',
