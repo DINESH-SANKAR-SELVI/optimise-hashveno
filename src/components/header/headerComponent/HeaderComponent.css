@@ -210,8 +210,8 @@
   }
 
   .mobile-nav-button {
-      background-color: #141214;
-      border-radius: 50px;
+      /* background-color: #141214; */
+      /* border-radius: 50px; */
       position: relative;
       display: inline-block;
       overflow: hidden;

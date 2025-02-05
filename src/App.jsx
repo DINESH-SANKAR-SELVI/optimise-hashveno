@@ -1,5 +1,5 @@
 /****************** In-Build Functions************************/
-import React, { useEffect, lazy } from 'react';
+import React, { useEffect, lazy, useState } from 'react';
 import { Helmet } from 'react-helmet';
 /*************************************************************/
 
@@ -27,6 +27,7 @@ import './styles/Fonts.css';
 import InstallUpdatePopUpComponent from './components/installUpdatePopUp/installUpdatePopUpComponent/installUpdatePopUpComponent';
 import HeaderComponent from './components/header/headerComponent/HeaderComponent';
 // import PermissionRequestComponent from './components/PermissionRequest/permissionRequestComponent/PermissionRequestComponent';
+import Login from './components/Auth/Login/Login';
 /*************************************************************/
 
 /****************** Pages ************************************/
@@ -51,6 +52,8 @@ const App = () => {
         handleInstallClick,
         handleCloseModal,
     } = usePermissions();
+
+    const [showLogin, setShowLogin] = useState(false);
 
     useEventListeners();
 
@@ -90,8 +93,9 @@ const App = () => {
             <meta name="twitter:image" content="URL to your image" /> */}
             </Helmet>
 
-            <HeaderComponent />
+            <HeaderComponent setShowLogin={setShowLogin} />
             <HomePage id='home' />
+            { showLogin && <Login id='login' setShowLogin={setShowLogin} /> }
             <AboutPage id='about' />
             <ServicesPage id='services' />
             <ProductsPage id='products' />

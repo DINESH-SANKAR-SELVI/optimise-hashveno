@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import './HeaderComponent.css';
 import ThemeSwitcherComponent from '../../themeSwitcher/themeSwitcherComponent/ThemeSwitcherComponent';
 
-const HeaderComponent = () => {
+const HeaderComponent = ({setShowLogin}) => {
 
   const [prevScrollpos, setPrevScrollpos] = useState(window.pageYOffset);
   const [top, setTop] = useState(0);
@@ -57,6 +57,10 @@ const HeaderComponent = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  const handleLoginOpenButtonClick = () => {
+    setShowLogin(true);
+  };
 
   const navbarStyle = {
     position: 'fixed',
@@ -113,7 +117,7 @@ const HeaderComponent = () => {
         </div>
         <div className="nav-button">
           <div className="anim-layer"></div>
-          <a href="#" className='btn btn-outline-light'>Join us</a>
+          <a onClick={handleLoginOpenButtonClick} className='btn btn-outline-light'>Join us</a>
         </div>
         <div id="hamburger-menu" onClick={toggleMobileMenu}>&#9776;</div>
       </div>
@@ -157,10 +161,10 @@ const HeaderComponent = () => {
             </div></a></li>
           </ul>
         </div>
-        {/* <div className="mobile-nav-button" onClick={closeMobileMenu}>
+        <div className="mobile-nav-button" onClick={closeMobileMenu}>
           <div className="anim-layer"></div>
-          <a href="#">Sign Up</a>
-        </div> */}
+          <a onClick={handleLoginOpenButtonClick} className='btn btn-outline-light'>Join us</a>
+        </div>
         <div id="hamburger-cross" onClick={closeMobileMenu}>&#10006;</div>
       </div>
     </>
