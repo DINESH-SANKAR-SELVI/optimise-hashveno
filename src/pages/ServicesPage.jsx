@@ -1,8 +1,7 @@
 import React from 'react';
 import PageContainer from '../Wrapper/PageContainer';
 import { useTranslation } from 'react-i18next';
-import ServicesComponent from '../components/services/ServicesComponent/ServicesComponent';
-
+import ServicesComponent from '../components/services/servicesComponent/ServicesComponent';
 const ServicesPage = ({id}) => {
 
     const { t } = useTranslation();

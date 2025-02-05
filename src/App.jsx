@@ -24,7 +24,7 @@ import './styles/Fonts.css';
 /*************************************************************/
 
 /****************** Components *******************************/
-import InstallUpdatePopUpComponent from './components/installUpdatePopUp/installUpdatePopUpComponent/installUpdatePopUpComponent';
+import InstallUpdatePopUpComponent from './components/installUpdatePopUp/installUpdatePopUpComponent/InstallUpdatePopUpComponent';
 import HeaderComponent from './components/header/headerComponent/HeaderComponent';
 // import PermissionRequestComponent from './components/PermissionRequest/permissionRequestComponent/PermissionRequestComponent';
 import Login from './components/Auth/Login/Login';
