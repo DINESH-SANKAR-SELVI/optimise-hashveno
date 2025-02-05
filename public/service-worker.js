@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hashveno-cache-v0.3.0';
+const CACHE_NAME = 'hashveno-cache-v1.0.0';
 const FILES_TO_CACHE = [
     '/',
     '/index.html',
